@@ -12,7 +12,7 @@ import math
 import random
 import scipy.stats
 import time
-from net_lab import UnifiedDANN
+from net_lab import CSS
 
 warnings.filterwarnings("ignore")
 
@@ -193,7 +193,7 @@ if __name__ == '__main__':
             source_dataloader = DataLoader(source_dataset, batch_size=BATCH_SIZE, shuffle=True, drop_last=True)
             target_dataloader = DataLoader(target_dataset, batch_size=BATCH_SIZE, shuffle=True, drop_last=True)
 
-            myModel = UnifiedDANN(all_subject_ids=all_subject_ids_list).to(DEVICE)
+            myModel = CSS(all_subject_ids=all_subject_ids_list).to(DEVICE)
 
             loss_label_func, loss_domain_func = nn.MSELoss().to(DEVICE), nn.NLLLoss().to(DEVICE)
             opt = torch.optim.Adam(myModel.parameters(), lr=LEARNING_RATE)
