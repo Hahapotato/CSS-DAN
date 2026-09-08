@@ -12,7 +12,7 @@ import math
 import random
 import scipy.stats
 import time
-from net_lab import CSS
+from net import CSS
 
 warnings.filterwarnings("ignore")
 
