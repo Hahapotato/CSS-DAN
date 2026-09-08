@@ -345,7 +345,7 @@ class SpecificExtractor(nn.Module):
             return x
 
 
-class UnifiedDANN(nn.Module):
+class CSS(nn.Module):
     def __init__(self, all_subject_ids, num_classes=1):
         super().__init__()
         self.shared_extractor = SharedExtractor()
